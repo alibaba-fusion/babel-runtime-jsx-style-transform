@@ -1,6 +1,6 @@
 {
   "name": "babel-runtime-jsx-style-transform",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Babel runtime support for jsx.",
   "main": "dist/babel-runtime-jsx-style-transform.umd.js",
   "scripts": {
