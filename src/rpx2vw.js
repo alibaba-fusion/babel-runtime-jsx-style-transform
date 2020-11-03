@@ -16,22 +16,31 @@ function toFixed(number, precision) {
 
 // transform rpx to vw
 function createRpxReplace(opts, viewportUnit, viewportSize) {
-  return function(m, $1) {
+  return function (m, $1) {
     if (!$1) {
       return m;
     }
     const pixels = parseFloat($1);
-    const parsedVal = toFixed((pixels / viewportSize) * 100, opts.unitPrecision);
+    const parsedVal = toFixed(
+      (pixels / viewportSize) * 100,
+      opts.unitPrecision
+    );
     return parsedVal + viewportUnit;
   };
 }
 
-function rpx2vw(str, options) {
+function rpx2vw(str, options = {}) {
   const opts = Object.assign({}, defaults, options);
-  if (str.indexOf('rpx') === -1) {
-    return;
+  if (typeof str !== 'string') {
+    return str;
   }
-  return str.replace(rpxRegex, createRpxReplace(opts, opts.viewportUnit, opts.viewportWidth));
+  if (str.indexOf('rpx') === -1) {
+    return str;
+  }
+  return str.replace(
+    rpxRegex,
+    createRpxReplace(opts, opts.viewportUnit, opts.viewportWidth)
+  );
 }
 
 export default rpx2vw;
