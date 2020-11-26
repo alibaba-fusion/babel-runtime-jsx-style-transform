@@ -8,7 +8,8 @@ function rpx2vw4style(input) {
       if (input.hasOwnProperty(cssProperty)) {
         const value = input[cssProperty];
         if (RPX_PROPERTY_JSX.indexOf(cssProperty) !== -1) {
-          input[cssProperty] = rpx2vw(value);
+          const v = typeof value === 'number' ? value + 'rpx' : value
+          input[cssProperty] = rpx2vw(v);
         }
       }
     }
@@ -17,8 +18,8 @@ function rpx2vw4style(input) {
     const newStyles = styles.map((style) => {
       if (!style) return;
       const [key, value] = style.split(':');
-      console.log('value', value)
-      return `${key.trim()}: ${rpx2vw(value.trim())}`;
+      const v = typeof value === 'number' ? value + 'rpx' : value
+      return `${key.trim()}: ${rpx2vw(v.trim())}`;
     });
     return newStyles.join(';');
   }

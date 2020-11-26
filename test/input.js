@@ -3,6 +3,7 @@ exports.ts1 = {
   height: '2rpx',
   maxHeight: '4rpx',
   border: '1rpx solid #000000',
+  margin: '1 2rpx 3rpx 4rpx'
 };
 
 
