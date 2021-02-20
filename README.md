@@ -1,4 +1,4 @@
-# babel-runtime-jsx-plus
+# babel-runtime-jsx-style-transform
 
 Support runtime of jsx style.
 
