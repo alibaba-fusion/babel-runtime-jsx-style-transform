@@ -28,6 +28,7 @@ export const RPX_PROPERTY_JSX = [
   'minHeight',
   'maxWidth',
   'minWidth',
+  'textIndent'
 ];
 
 export const RPX_PROPERTY = [
@@ -60,4 +61,5 @@ export const RPX_PROPERTY = [
   'min-height',
   'max-width',
   'min-width',
+  'text-indent'
 ];
