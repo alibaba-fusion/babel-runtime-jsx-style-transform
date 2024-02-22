@@ -2,8 +2,8 @@ import babel from 'rollup-plugin-babel';
 import replace from 'rollup-plugin-replace';
 import filesize from 'rollup-plugin-filesize';
 import { uglify } from 'rollup-plugin-uglify';
-import { name } from './package.json';
 
+const name = 'babel-runtime-jsx-style-transform';
 const babelConfig = {
   presets: [
     [
